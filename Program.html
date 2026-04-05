@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Simon &amp; Sonia – Renewal of Vows &amp; Birthday Celebration&lt;/title&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">  :root {</p>
+<p class="p1">    --gold:      #C9A030;</p>
+<p class="p1">    --dark-gold: #8B6500;</p>
+<p class="p1">    --mid-gold:  #B8860B;</p>
+<p class="p1">    --pale-gold: #F5E6C0;</p>
+<p class="p1">    --ivory:     #FFFDF5;</p>
+<p class="p1">    --cream:     #FAF4E8;</p>
+<p class="p1">    --brown:     #3B2510;</p>
+<p class="p1">    --mid-brown: #6B4C2A;</p>
+<p class="p1">    --light-brown: #9B7A52;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  * { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p2"><br></p>
+<p class="p1">  body {</p>
+<p class="p1">    background: var(--cream);</p>
+<p class="p1">    font-family: 'EB Garamond', serif;</p>
+<p class="p1">    color: var(--brown);</p>
+<p class="p1">    min-height: 100vh;</p>
+<p class="p1">    background-image:</p>
+<p class="p1">      radial-gradient(ellipse at 20% 20%, rgba(201,160,48,0.08) 0%, transparent 60%),</p>
+<p class="p1">      radial-gradient(ellipse at 80% 80%, rgba(201,160,48,0.06) 0%, transparent 60%);</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Floating petals background ── */</p>
+<p class="p1">  .bg-petals {</p>
+<p class="p1">    position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;</p>
+<p class="p1">  }</p>
+<p class="p1">  .petal {</p>
+<p class="p1">    position: absolute;</p>
+<p class="p1">    opacity: 0.12;</p>
+<p class="p1">    animation: floatPetal linear infinite;</p>
+<p class="p1">    font-size: 1.4rem;</p>
+<p class="p1">  }</p>
+<p class="p1">  @keyframes floatPetal {</p>
+<p class="p1">    0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }</p>
+<p class="p1">    10%  { opacity: 0.12; }</p>
+<p class="p1">    90%  { opacity: 0.12; }</p>
+<p class="p1">    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Main wrapper ── */</p>
+<p class="p1">  .page-wrap {</p>
+<p class="p1">    position: relative; z-index: 1;</p>
+<p class="p1">    max-width: 600px;</p>
+<p class="p1">    margin: 0 auto;</p>
+<p class="p1">    padding: 20px 16px 60px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Card ── */</p>
+<p class="p1">  .card {</p>
+<p class="p1">    background: var(--ivory);</p>
+<p class="p1">    border: 1.5px solid var(--gold);</p>
+<p class="p1">    border-radius: 2px;</p>
+<p class="p1">    box-shadow:</p>
+<p class="p1">      0 0 0 6px var(--ivory),</p>
+<p class="p1">      0 0 0 7.5px var(--gold),</p>
+<p class="p1">      0 20px 60px rgba(139,101,0,0.18);</p>
+<p class="p1">    padding: 0;</p>
+<p class="p1">    overflow: hidden;</p>
+<p class="p1">    animation: fadeUp 1s ease both;</p>
+<p class="p1">  }</p>
+<p class="p1">  @keyframes fadeUp {</p>
+<p class="p1">    from { opacity: 0; transform: translateY(30px); }</p>
+<p class="p1">    to   { opacity: 1; transform: translateY(0); }</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .card-inner {</p>
+<p class="p1">    border: 1px solid rgba(201,160,48,0.35);</p>
+<p class="p1">    margin: 10px;</p>
+<p class="p1">    padding: 36px 28px 32px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── SVG corner ornaments ── */</p>
+<p class="p1">  .corners {</p>
+<p class="p1">    position: relative;</p>
+<p class="p1">  }</p>
+<p class="p1">  .corner-svg {</p>
+<p class="p1">    position: absolute;</p>
+<p class="p1">    width: 80px; height: 80px;</p>
+<p class="p1">    opacity: 0.85;</p>
+<p class="p1">  }</p>
+<p class="p1">  .corner-svg.tl { top: -4px;  left: -4px; }</p>
+<p class="p1">  .corner-svg.tr { top: -4px;  right: -4px;  transform: scaleX(-1); }</p>
+<p class="p1">  .corner-svg.bl { bottom: -4px; left: -4px;  transform: scaleY(-1); }</p>
+<p class="p1">  .corner-svg.br { bottom: -4px; right: -4px; transform: scale(-1,-1); }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Header ── */</p>
+<p class="p1">  .header { text-align: center; padding: 20px 40px 0; }</p>
+<p class="p2"><br></p>
+<p class="p1">  .top-ornament {</p>
+<p class="p1">    display: block; margin: 0 auto 14px;</p>
+<p class="p1">    color: var(--gold); font-size: 1.1rem;</p>
+<p class="p1">    letter-spacing: 6px;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.2s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .main-title {</p>
+<p class="p1">    font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1">    font-size: 2.2rem;</p>
+<p class="p1">    font-weight: 600;</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    color: var(--dark-gold);</p>
+<p class="p1">    line-height: 1.15;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.3s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .subtitle {</p>
+<p class="p1">    font-family: 'EB Garamond', serif;</p>
+<p class="p1">    font-size: 1rem;</p>
+<p class="p1">    font-weight: 400;</p>
+<p class="p1">    color: var(--mid-brown);</p>
+<p class="p1">    margin-top: 6px;</p>
+<p class="p1">    letter-spacing: 0.5px;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.4s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .in-honour {</p>
+<p class="p1">    font-size: 0.85rem;</p>
+<p class="p1">    color: var(--light-brown);</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    margin-top: 14px;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.5s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .couple-names {</p>
+<p class="p1">    font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1">    font-size: 1.7rem;</p>
+<p class="p1">    font-weight: 600;</p>
+<p class="p1">    color: var(--brown);</p>
+<p class="p1">    margin-top: 4px;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.6s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Gold divider ── */</p>
+<p class="p1">  .divider {</p>
+<p class="p1">    display: flex; align-items: center; justify-content: center;</p>
+<p class="p1">    gap: 10px; margin: 18px auto;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.5s both;</p>
+<p class="p1">  }</p>
+<p class="p1">  .divider-line {</p>
+<p class="p1">    flex: 1; max-width: 80px;</p>
+<p class="p1">    height: 1px; background: var(--gold);</p>
+<p class="p1">  }</p>
+<p class="p1">  .divider-gem {</p>
+<p class="p1">    color: var(--gold); font-size: 0.8rem;</p>
+<p class="p1">    transform: rotate(45deg); display: inline-block;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .thin-divider {</p>
+<p class="p1">    width: 120px; height: 1px;</p>
+<p class="p1">    background: linear-gradient(to right, transparent, var(--gold), transparent);</p>
+<p class="p1">    margin: 10px auto;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Section ── */</p>
+<p class="p1">  .section {</p>
+<p class="p1">    margin-top: 28px;</p>
+<p class="p1">    animation: fadeUp 1s ease 0.7s both;</p>
+<p class="p1">  }</p>
+<p class="p1">  .section + .section { margin-top: 32px; }</p>
+<p class="p2"><br></p>
+<p class="p1">  .section-header {</p>
+<p class="p1">    text-align: center; margin-bottom: 6px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .section-tag {</p>
+<p class="p1">    display: inline-block;</p>
+<p class="p1">    font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1">    font-size: 1.15rem;</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    font-weight: 600;</p>
+<p class="p1">    color: var(--dark-gold);</p>
+<p class="p1">    letter-spacing: 1px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .section-rule {</p>
+<p class="p1">    width: 60px; height: 1px;</p>
+<p class="p1">    background: var(--gold);</p>
+<p class="p1">    margin: 6px auto 18px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Program items ── */</p>
+<p class="p1">  .program-list { list-style: none; }</p>
+<p class="p2"><br></p>
+<p class="p1">  .program-item {</p>
+<p class="p1">    text-align: center;</p>
+<p class="p1">    padding: 9px 12px;</p>
+<p class="p1">    border-bottom: 1px solid rgba(201,160,48,0.15);</p>
+<p class="p1">    transition: background 0.2s;</p>
+<p class="p1">  }</p>
+<p class="p1">  .program-item:last-child { border-bottom: none; }</p>
+<p class="p1">  .program-item:nth-child(even) { background: rgba(245,230,192,0.2); }</p>
+<p class="p1">  .program-item:hover { background: rgba(245,230,192,0.4); }</p>
+<p class="p2"><br></p>
+<p class="p1">  .item-title {</p>
+<p class="p1">    font-family: 'EB Garamond', serif;</p>
+<p class="p1">    font-size: 1rem;</p>
+<p class="p1">    font-weight: 500;</p>
+<p class="p1">    color: var(--brown);</p>
+<p class="p1">    display: block;</p>
+<p class="p1">    letter-spacing: 0.3px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .item-name {</p>
+<p class="p1">    font-family: 'EB Garamond', serif;</p>
+<p class="p1">    font-size: 0.875rem;</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    color: var(--mid-brown);</p>
+<p class="p1">    display: block;</p>
+<p class="p1">    margin-top: 2px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Bottom scripture ── */</p>
+<p class="p1">  .scripture {</p>
+<p class="p1">    text-align: center;</p>
+<p class="p1">    margin-top: 30px;</p>
+<p class="p1">    padding-top: 20px;</p>
+<p class="p1">    border-top: 1px solid rgba(201,160,48,0.3);</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    font-size: 0.875rem;</p>
+<p class="p1">    color: var(--mid-brown);</p>
+<p class="p1">    line-height: 1.6;</p>
+<p class="p1">    animation: fadeUp 1s ease 1s both;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  .directors {</p>
+<p class="p1">    text-align: center;</p>
+<p class="p1">    margin-top: 16px;</p>
+<p class="p1">    font-size: 0.8rem;</p>
+<p class="p1">    color: var(--light-brown);</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    letter-spacing: 0.3px;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Bottom botanical ── */</p>
+<p class="p1">  .bottom-ornament {</p>
+<p class="p1">    text-align: center;</p>
+<p class="p1">    margin-top: 16px;</p>
+<p class="p1">    color: var(--gold);</p>
+<p class="p1">    font-size: 1rem;</p>
+<p class="p1">    letter-spacing: 4px;</p>
+<p class="p1">    opacity: 0.7;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── QR Section ── */</p>
+<p class="p1">  .qr-section {</p>
+<p class="p1">    margin-top: 32px;</p>
+<p class="p1">    text-align: center;</p>
+<p class="p1">    padding: 24px 20px;</p>
+<p class="p1">    background: var(--ivory);</p>
+<p class="p1">    border: 1px solid rgba(201,160,48,0.35);</p>
+<p class="p1">    border-radius: 2px;</p>
+<p class="p1">    animation: fadeUp 1s ease 1.1s both;</p>
+<p class="p1">  }</p>
+<p class="p1">  .qr-label {</p>
+<p class="p1">    font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1">    font-size: 1.05rem;</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">    color: var(--dark-gold);</p>
+<p class="p1">    margin-bottom: 14px;</p>
+<p class="p1">  }</p>
+<p class="p1">  #qrcode {</p>
+<p class="p1">    display: inline-block;</p>
+<p class="p1">    padding: 10px;</p>
+<p class="p1">    background: white;</p>
+<p class="p1">    border: 1px solid var(--pale-gold);</p>
+<p class="p1">    box-shadow: 0 4px 16px rgba(139,101,0,0.12);</p>
+<p class="p1">  }</p>
+<p class="p1">  #qrcode canvas, #qrcode img { display: block; }</p>
+<p class="p1">  .qr-instruction {</p>
+<p class="p1">    font-size: 0.8rem;</p>
+<p class="p1">    color: var(--light-brown);</p>
+<p class="p1">    margin-top: 10px;</p>
+<p class="p1">    font-style: italic;</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  /* ── Responsive ── */</p>
+<p class="p1">  @media (max-width: 480px) {</p>
+<p class="p1">    .main-title { font-size: 1.75rem; }</p>
+<p class="p1">    .card-inner { padding: 28px 18px 24px; }</p>
+<p class="p1">    .corner-svg { width: 60px; height: 60px; }</p>
+<p class="p1">  }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Floating petals --&gt;</p>
+<p class="p1">&lt;div class="bg-petals" id="petals"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="page-wrap"&gt;</p>
+<p class="p1">  &lt;div class="card corners" id="mainCard"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;!-- Corner SVG ornaments --&gt;</p>
+<p class="p1">    &lt;svg class="corner-svg tl" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1">      &lt;g stroke="#C9A030" stroke-width="1" fill="none"&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q20 12 36 8" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q12 20 8 36" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q18 18 28 28" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;!-- leaves right --&gt;</p>
+<p class="p1">        &lt;ellipse cx="20" cy="9" rx="5" ry="3" transform="rotate(-20 20 9)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="32" cy="7" rx="4" ry="2.5" transform="rotate(-15 32 7)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;!-- leaves up --&gt;</p>
+<p class="p1">        &lt;ellipse cx="9" cy="20" rx="3" ry="5" transform="rotate(20 9 20)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="7" cy="32" rx="2.5" ry="4" transform="rotate(15 7 32)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;!-- diagonal leaves --&gt;</p>
+<p class="p1">        &lt;ellipse cx="18" cy="18" rx="4" ry="2.5" transform="rotate(45 18 18)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="26" cy="26" rx="3.5" ry="2" transform="rotate(45 26 26)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;!-- berries --&gt;</p>
+<p class="p1">        &lt;circle cx="36" cy="7" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="7" cy="36" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="29" cy="29" r="2" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;!-- curls --&gt;</p>
+<p class="p1">        &lt;path d="M36 7 Q40 8 39 12" stroke-width="0.8"/&gt;</p>
+<p class="p1">        &lt;path d="M7 36 Q8 40 12 39" stroke-width="0.8"/&gt;</p>
+<p class="p1">      &lt;/g&gt;</p>
+<p class="p1">    &lt;/svg&gt;</p>
+<p class="p1">    &lt;svg class="corner-svg tr" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1">      &lt;g stroke="#C9A030" stroke-width="1" fill="none"&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q20 12 36 8" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q12 20 8 36" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q18 18 28 28" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="20" cy="9" rx="5" ry="3" transform="rotate(-20 20 9)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="32" cy="7" rx="4" ry="2.5" transform="rotate(-15 32 7)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="9" cy="20" rx="3" ry="5" transform="rotate(20 9 20)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="7" cy="32" rx="2.5" ry="4" transform="rotate(15 7 32)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="18" cy="18" rx="4" ry="2.5" transform="rotate(45 18 18)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="26" cy="26" rx="3.5" ry="2" transform="rotate(45 26 26)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="36" cy="7" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="7" cy="36" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="29" cy="29" r="2" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;path d="M36 7 Q40 8 39 12" stroke-width="0.8"/&gt;</p>
+<p class="p1">        &lt;path d="M7 36 Q8 40 12 39" stroke-width="0.8"/&gt;</p>
+<p class="p1">      &lt;/g&gt;</p>
+<p class="p1">    &lt;/svg&gt;</p>
+<p class="p1">    &lt;svg class="corner-svg bl" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1">      &lt;g stroke="#C9A030" stroke-width="1" fill="none"&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q20 12 36 8" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q12 20 8 36" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q18 18 28 28" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="20" cy="9" rx="5" ry="3" transform="rotate(-20 20 9)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="32" cy="7" rx="4" ry="2.5" transform="rotate(-15 32 7)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="9" cy="20" rx="3" ry="5" transform="rotate(20 9 20)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="7" cy="32" rx="2.5" ry="4" transform="rotate(15 7 32)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="18" cy="18" rx="4" ry="2.5" transform="rotate(45 18 18)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="26" cy="26" rx="3.5" ry="2" transform="rotate(45 26 26)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="36" cy="7" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="7" cy="36" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="29" cy="29" r="2" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;path d="M36 7 Q40 8 39 12" stroke-width="0.8"/&gt;</p>
+<p class="p1">        &lt;path d="M7 36 Q8 40 12 39" stroke-width="0.8"/&gt;</p>
+<p class="p1">      &lt;/g&gt;</p>
+<p class="p1">    &lt;/svg&gt;</p>
+<p class="p1">    &lt;svg class="corner-svg br" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1">      &lt;g stroke="#C9A030" stroke-width="1" fill="none"&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q20 12 36 8" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q12 20 8 36" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;path d="M8 8 Q18 18 28 28" stroke-width="1.2"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="20" cy="9" rx="5" ry="3" transform="rotate(-20 20 9)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="32" cy="7" rx="4" ry="2.5" transform="rotate(-15 32 7)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="9" cy="20" rx="3" ry="5" transform="rotate(20 9 20)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="7" cy="32" rx="2.5" ry="4" transform="rotate(15 7 32)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="18" cy="18" rx="4" ry="2.5" transform="rotate(45 18 18)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;ellipse cx="26" cy="26" rx="3.5" ry="2" transform="rotate(45 26 26)" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="36" cy="7" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="7" cy="36" r="2.5" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;circle cx="29" cy="29" r="2" fill="#C9A030" stroke="none"/&gt;</p>
+<p class="p1">        &lt;path d="M36 7 Q40 8 39 12" stroke-width="0.8"/&gt;</p>
+<p class="p1">        &lt;path d="M7 36 Q8 40 12 39" stroke-width="0.8"/&gt;</p>
+<p class="p1">      &lt;/g&gt;</p>
+<p class="p1">    &lt;/svg&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;div class="card-inner"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;!-- Header --&gt;</p>
+<p class="p1">      &lt;div class="header"&gt;</p>
+<p class="p1">        &lt;span class="top-ornament"&gt;✦ ─── ✦ ─── ✦&lt;/span&gt;</p>
+<p class="p1">        &lt;h1 class="main-title"&gt;Renewal of Vows&lt;/h1&gt;</p>
+<p class="p1">        &lt;p class="subtitle"&gt;70th &amp;amp; 67th Birthday Celebration&lt;/p&gt;</p>
+<p class="p1">        &lt;p class="in-honour"&gt;In Honour of&lt;/p&gt;</p>
+<p class="p1">        &lt;p class="couple-names"&gt;Simon &amp;amp; Sonia&lt;/p&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;div class="divider"&gt;</p>
+<p class="p1">        &lt;div class="divider-line"&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;span class="divider-gem"&gt;◆&lt;/span&gt;</p>
+<p class="p1">        &lt;div class="divider-line"&gt;&lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;!-- PART ONE --&gt;</p>
+<p class="p1">      &lt;div class="section"&gt;</p>
+<p class="p1">        &lt;div class="section-header"&gt;</p>
+<p class="p1">          &lt;span class="section-tag"&gt;✦ Part One ✦&lt;/span&gt;</p>
+<p class="p1">          &lt;div class="section-rule"&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;/div&gt;</p>
+<p class="p1">        &lt;ul class="program-list"&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Opening Prayer&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor B.K&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Blessing&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor B.K Maluleke&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Congratulations&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Jambatani F&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Traditional Song&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Traditional Song&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Announcement&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Closure&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor Maluleke&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">        &lt;/ul&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;div class="divider" style="margin-top:28px"&gt;</p>
+<p class="p1">        &lt;div class="divider-line"&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;span class="divider-gem"&gt;◆&lt;/span&gt;</p>
+<p class="p1">        &lt;div class="divider-line"&gt;&lt;/div&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;!-- PART TWO --&gt;</p>
+<p class="p1">      &lt;div class="section"&gt;</p>
+<p class="p1">        &lt;div class="section-header"&gt;</p>
+<p class="p1">          &lt;span class="section-tag"&gt;✦ Part Two ✦&lt;/span&gt;</p>
+<p class="p1">          &lt;div class="section-rule"&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;/div&gt;</p>
+<p class="p1">        &lt;ul class="program-list"&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Opening&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Magomani Moses&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Welcome&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Dr Shikolokolo H P&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Praise and Worship&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Shikolokolo T.G&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Introduction of Man of God&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor Moses Magomani&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Word of God&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Birthday Wishes&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Baloyi Noria&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Friends&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Khosa M.M, Tshikani R.J &amp;amp; Mrs C B Baloyi&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Colleagues&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mpangela T.S &amp;amp; Tshabane M S&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;We Fellowship With Him&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor Shitlhavani T&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Grandchildren&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Valoyi P N &amp;amp; Mavuyangwa P&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Children&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Nkuna T, Clyde, Eichhorn &amp;amp; Wisani&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Siblings&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mr Ntsenani John &amp;amp; Makamu G.S&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Grand Parents&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mr Mabasa S &amp;amp; Mr Mc Nkatini&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Family Representative&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs M Mnisi &amp;amp; Prof O R Chauke&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Word of Support – Grannies Ministry&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Magomani F &amp;amp; Tlharihani&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Retirees&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs G Mathonsi&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Lobola Messenger&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Prof Babane T&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;SAPA&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mr Magomani R J&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;SADTU&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Baloyi M&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;ANC&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Toast &amp;amp; Cutting of Cake&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor R.M&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Word by Headwoman&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Xifaxani&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Response&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Gifts&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Mrs Mboweni E&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Vote of Thanks&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Dr D Chauke&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Announcement&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Bamuza Ethel&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">          &lt;li class="program-item"&gt;</p>
+<p class="p1">            &lt;span class="item-title"&gt;Closure&lt;/span&gt;</p>
+<p class="p1">            &lt;span class="item-name"&gt;Pastor Magomani T F&lt;/span&gt;</p>
+<p class="p1">          &lt;/li&gt;</p>
+<p class="p1">        &lt;/ul&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;!-- Scripture --&gt;</p>
+<p class="p1">      &lt;div class="scripture"&gt;</p>
+<p class="p1">        &lt;p&gt;"What God has joined together, let no one separate."&lt;/p&gt;</p>
+<p class="p1">        &lt;p style="margin-top:4px; font-size:0.8rem; color:var(--gold);"&gt;— Mark 10:9&lt;/p&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;p class="directors"&gt;Program Directors: Baloyi M &amp;amp; Mahungu E&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;div class="bottom-ornament"&gt;✦ ─── ✦ ─── ✦&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">      &lt;!-- QR Code Section --&gt;</p>
+<p class="p1">      &lt;div class="qr-section" style="margin-top:28px;"&gt;</p>
+<p class="p1">        &lt;p class="qr-label"&gt;📱 Scan to view the digital program&lt;/p&gt;</p>
+<p class="p1">        &lt;div id="qrcode"&gt;&lt;/div&gt;</p>
+<p class="p1">        &lt;p class="qr-instruction"&gt;Share this QR code so guests can follow along on their phones&lt;/p&gt;</p>
+<p class="p1">      &lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">    &lt;/div&gt;&lt;!-- card-inner --&gt;</p>
+<p class="p1">  &lt;/div&gt;&lt;!-- card --&gt;</p>
+<p class="p1">&lt;/div&gt;&lt;!-- page-wrap --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- QR Code library --&gt;</p>
+<p class="p1">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">  // ── Floating petals ──</p>
+<p class="p1">  const petalContainer = document.getElementById('petals');</p>
+<p class="p1">  const symbols = ['✦','❋','✿','❀','✾'];</p>
+<p class="p1">  for (let i = 0; i &lt; 14; i++) {</p>
+<p class="p1">    const p = document.createElement('span');</p>
+<p class="p1">    p.className = 'petal';</p>
+<p class="p1">    p.textContent = symbols[Math.floor(Math.random() * symbols.length)];</p>
+<p class="p1">    p.style.left = Math.random() * 100 + 'vw';</p>
+<p class="p1">    p.style.animationDuration = (18 + Math.random() * 20) + 's';</p>
+<p class="p1">    p.style.animationDelay = (Math.random() * 20) + 's';</p>
+<p class="p1">    p.style.fontSize = (0.8 + Math.random() * 1) + 'rem';</p>
+<p class="p1">    petalContainer.appendChild(p);</p>
+<p class="p1">  }</p>
+<p class="p2"><br></p>
+<p class="p1">  // ── QR Code ──</p>
+<p class="p1">  // Points to this page's current URL (works when hosted anywhere)</p>
+<p class="p1">  const url = window.location.href;</p>
+<p class="p1">  new QRCode(document.getElementById('qrcode'), {</p>
+<p class="p1">    text: url,</p>
+<p class="p1">    width: 160,</p>
+<p class="p1">    height: 160,</p>
+<p class="p1">    colorDark: '#8B6500',</p>
+<p class="p1">    colorLight: '#FFFDF5',</p>
+<p class="p1">    correctLevel: QRCode.CorrectLevel.M</p>
+<p class="p1">  });</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
